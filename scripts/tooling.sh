@@ -16,13 +16,27 @@ sudo apt-get install vim
 echo ""
 echo ""
 echo "## -> Installing Composer"
-sudo apt-get -y install composer
+EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+ACTUAL_SIGNATURE=$(php -r "echo hash_file('SHA384', 'composer-setup.php');")
+
+if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
+then
+    >&2 echo 'ERROR: Invalid installer signature'
+    rm composer-setup.php
+    exit 1
+fi
+
+php composer-setup.php --quiet
+rm composer-setup.php
+sudo mv composer.phar /usr/local/bin/composer
 
 # nodejs
 echo ""
 echo ""
 echo "## -> Installing NodeJS"
-sudo apt-get -y install nodejs
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # supervisor
 echo ""
