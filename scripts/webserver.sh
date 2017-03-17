@@ -29,6 +29,9 @@ sudo a2ensite dynamic-vhosts
 # enable rewrite module
 sudo a2enmod rewrite
 
+# enable headers module
+sudo a2enmod headers
+
 echo ""
 echo ""
 echo "## -> Changing document root to /hom/ubuntu/www"
