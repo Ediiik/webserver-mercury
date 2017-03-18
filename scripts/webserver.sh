@@ -26,15 +26,21 @@ sudo cp /home/ubuntu/source-files/apache-dynamic-vhosts.conf /etc/apache2/sites-
 # enable vhosts site config
 sudo a2ensite dynamic-vhosts
 
+echo ""
+echo ""
+echo "## -> Enabling Rewrite module"
 # enable rewrite module
 sudo a2enmod rewrite
 
+echo ""
+echo ""
+echo "## -> Enabling Headers module"
 # enable headers module
 sudo a2enmod headers
 
 echo ""
 echo ""
-echo "## -> Changing document root to /hom/ubuntu/www"
+echo "## -> Changing document root to /home/ubuntu/www"
 sudo rm -rf /var/www/html
 sudo ln -s /home/ubuntu/www /var/www/html
 

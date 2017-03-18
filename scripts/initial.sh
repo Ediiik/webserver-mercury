@@ -6,6 +6,9 @@ echo ""
 echo "## -> Updating packages"
 sudo apt-get update
 
+# upgrade system distribution
+sudo apt-get -y dist-upgrade
+
 # upgrade the packages
 echo ""
 echo ""
