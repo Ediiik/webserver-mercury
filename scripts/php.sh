@@ -10,7 +10,7 @@ sudo apt-get -y install php7.0 php-pear libapache2-mod-php7.0 php7.0-mysql
 echo ""
 echo ""
 echo "## -> Installing additional PHP packages"
-sudo apt-get -y install php7.0-curl php7.0-json php7.0-cgi php7.0-zip
+sudo apt-get -y install php7.0-curl php7.0-json php7.0-cgi php7.0-zip php-gd imagick php-imagick php7.0-intl
 
 # enable mysqlnd module
 sudo phpenmod mysqlnd
