@@ -54,4 +54,4 @@ function mercury() {
     ( cd ~/path/to/your/mercury && vagrant $* )
 }
 ```
-Then you will be able to run `mercury up`, `mercury halt` and every `vangrant [command]` globaly.
+Then you will be able to run `mercury up`, `mercury halt` and every `vanrant [command]` globaly.
