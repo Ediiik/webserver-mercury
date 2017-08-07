@@ -5,7 +5,7 @@ It's **not recommended** to use this box on you production environment.
 
 ## Environment
 
-### Software
+### Software
 
 - OS: Ubuntu 16.04 (ubuntu/xenial64)
 - Webserver: Apache 2.4
