@@ -38,11 +38,17 @@ echo "## -> Installing NodeJS"
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
+# OpenSSL
+echo ""
+echo ""
+echo "## -> Instaling OpenSSL"
+sudo apt-get install -y openssl
+
 # PDF generators (snappy)
 echo ""
 echo ""
 echo "## -> Installing support tools for PDF generators"
-sudo apt-get install libgtk2.0-0 libgdk-pixbuf2.0-0 libfontconfig1 libxrender1 libx11-6 libglib2.0-0  libxft2 libfreetype6 libc6 zlib1g libpng12-0 libstdc++6-4.8-dbg-arm64-cross libgcc1 
+sudo apt-get install libxrender1 libssl-dev
 
 # supervisor
 echo ""
