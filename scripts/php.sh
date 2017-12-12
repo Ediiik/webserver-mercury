@@ -19,6 +19,7 @@ sudo apt-get -y install imagick
 sudo apt-get -y install php-imagick
 sudo apt-get -y install php7.0-intl
 sudo apt-get -y install php7.0-mbstring
+sudo apt-get -y install php7.0-gmp
 
 
 # enable mysqlnd module
