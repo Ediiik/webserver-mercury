@@ -12,7 +12,7 @@ sudo a2enmod mpm_prefork
 echo ""
 echo ""
 echo "## -> Restarting Apache"
-sudo systemctl restart apache2
+sudo service apache2 restart
 
 # setup virtual hosts
 echo ""
@@ -54,4 +54,4 @@ sudo sed -ie 's/export APACHE_RUN_GROUP=ubuntu/export APACHE_RUN_GROUP=ubuntu/g'
 echo ""
 echo ""
 echo "## -> Restarting Apache"
-sudo systemctl restart apache2
+sudo service apache2 restart
