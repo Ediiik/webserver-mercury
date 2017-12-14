@@ -50,6 +50,17 @@ echo "## -> Setting Apache user and group"
 sudo sed -ie 's/export APACHE_RUN_USER=www-data/export APACHE_RUN_USER=ubuntu/g' /etc/apache2/envvars
 sudo sed -ie 's/export APACHE_RUN_GROUP=ubuntu/export APACHE_RUN_GROUP=ubuntu/g' /etc/apache2/envvars
 
+echo ""
+echo ""
+echo "## -> Generating self-signed SSL certificate"
+sudo openssl genrsa -out /etc/ssl/mercury.test.key 2048
+sudo openssl req -new -x509 -key /etc/ssl/mercury.test.key -out /etc/ssl/mercury.test.cert -days 3650 -subj /CN=mercury.test
+
+echo ""
+echo ""
+echo "## -> Enabling ssl module"
+sudo a2enmod ssl
+
 # restart apache
 echo ""
 echo ""
